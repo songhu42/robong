@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main() {
+void a() {
 	printf("First committed by humanval. \n"); 
 	int a = 077;
 	float b = 44; 
