@@ -11,9 +11,9 @@
         <td colspan="4"><h2> Control LED on Arduino </h2></td>
       </tr>
       <tr>
-        <td rowspan="4" width="40"> &nbsp; </td>
-        <td rowspan="4" width="60"><img src="./images/offRed.gif" id="ld"></td>
-        <td rowspan="4" width="25"></td>
+        <td rowspan="5" width="50"> &nbsp; </td>
+        <td rowspan="5" width="100"><img src="./images/offRed.gif" id="ld"></td>
+        <td rowspan="5" width="60"></td>
         <td> &nbsp; </td>
       </tr>
       <tr>
@@ -26,6 +26,46 @@
           <a href="/led_off" target="response"><div onClick="led_off()">Turn Off</div></a>
         </td>
       </tr>
+
+      <tr>
+        <td>
+          <a href="/inc_servo" target="response"><div onClick="inc_servo()">Increse Servo </div></a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="/dec_servo" target="response"><div onClick="dec_servo()">Decrese Servo</div></a>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          서보 각도 : 
+          <input type="text" style="font-size:14px; border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="servoDegree" readonly size="10"/>
+        </td>
+        <td>
+          <input type="text" style="font-size:14px; " id="degree" size="5"/>
+          <button style="font-size:14px; " onClick="set_servo()">Set Degree</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          LED 상태 : 
+          <input type="text" style="font-size:14px; border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="ledStatus" readonly size="10"/>
+        </td>
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          가변저항 상태 : 
+        </td>
+        <td>
+          <canvas id="canvas"width="160" height="20"/>
+        </td>
+      </tr>
       <tr>
         <td> &nbsp; </td>
       </tr>
@@ -35,8 +75,8 @@
       <tr>
         <td rowspan="2">Status Message: </br> &nbsp;</br> &nbsp;</td>
         <td>
-          <iframe src="about:blank" width="129" height="35" frameborder="0"
-          marginwidth="0" marginheight="0" scrolling="no" name="response"></iframe>
+          <iframe src="about:blank" width="129" height="35" frameborder="0" style="font-size:14px; "
+          marginwidth="0" marginheight="0" scrolling="no" id="response" name="response"></iframe>
           <p></p>
         </td>
       </tr>
@@ -45,14 +85,56 @@
       </tr>
     </table>
     
-    <script src="javascripts/jquery-1.12.4.min.js"></script>
+    <script src="./javascripts/jquery-1.12.4.min.js"></script>
     <!-- script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script -->
-    <script src="javascripts/annyang.min.js"></script>
+    <script src="./javascripts/annyang.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <!-- script src="javascripts/responsivevoice.js"></script -->
     <script>
     
       $(document).ready(function()
       {
+
+        $(function() {
+          var val = 0; 
+          var oldVal = 0; 
+  
+          var socket = io(); 
+
+          socket.on('led', function(ledVal) {
+            console.log("led : " + ledVal); 
+            $("#ledStatus").val(ledVal); 
+          }); 
+
+          socket.on('ser', function(servoVal) {
+            console.log("ser : " + servoVal); 
+            $("#servoDegree").val(servoVal); 
+          }); 
+          
+
+          socket.on('adc', function(adcVal) {
+            console.log("adc : " + adcVal); 
+
+            $("#adcValue").val(adcVal); 
+            oldVal = val; 
+            val = parseInt(adcVal); // 0 ~ 1023
+
+            var canvas = document.getElementById("canvas"); 
+            var ctx = canvas.getContext("2d"); 
+
+            if( val != oldVal ) {
+              var fillPixel = val/6; // 1024 => 160px 
+              ctx.fillStyle = 'white'; 
+              ctx.fillRect(0, 0, 160, 20); 
+              ctx.fillStyle = 'red'; 
+              ctx.fillRect(0, 0, fillPixel, 20); 
+            }
+
+          }); 
+
+        });
+
+
         if (annyang)
         {
           var commands = {
@@ -64,6 +146,15 @@
             '불 꺼':function(){
               response.location.href=("http://localhost:3000/led_off");
               led_off();
+            }, 
+            '오른쪽':function(){
+              response.location.href=("http://localhost:3000/inc_servo");
+              led_on();
+            },
+            
+            '왼쪽':function(){
+              response.location.href=("http://localhost:3000/dec_servo");
+              led_off();
             }
           };
           annyang.addCommands(commands);
@@ -72,7 +163,14 @@
           annyang.start({ autoRestart: true, continuous: false });
         }
       });
-      
+
+      function set_servo() {
+        var deg = $("#degree").val(); 
+        console.log("set_servo : " + deg); 
+
+        $("#response").attr("src", "/set_servo/" + deg);  
+      }
+
       function led_on(){
         document.getElementById("ld").src = "./images/onRed.gif";
       }
@@ -80,6 +178,13 @@
       function led_off(){
         document.getElementById("ld").src = "./images/offRed.gif";
       }
+
+      function inc_servo(){
+      }
+      
+      function dec_servo(){
+      }
+
     </script>
   </body>
 </html>
