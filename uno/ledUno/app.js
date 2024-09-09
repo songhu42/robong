@@ -2,6 +2,7 @@ const express  = require('express');
 const app      = express();
 var http = require('http').Server(app); 
 var io = require('socket.io')(http); 
+var mysql = require('mysql');
 
 const path = require('path');
 
@@ -14,6 +15,14 @@ const sp = new SerialPort( {
   path:'/dev/ttyUSB0',
   baudRate: 115200
 });
+
+// connect database
+var mySqlClient = mysql.createConnection({
+	user:'sipt',
+	password:'sipt12',
+	database:'siptdb'
+});
+
 
 const port = 3000;
 
@@ -55,10 +64,32 @@ io.on('connection', (socket) => {
 					var ser = parseInt(rcv.substring(3)); 
 					console.log("ser : " + ser); 
 					io.emit('ser', ser); 
-				}  
-					
-			}
 
+				// 온습도 동시에 받는다 :로 구분 .. 
+				} else if (rcv.substring(0, 3) == "hum") {
+					var humtem = rcv.substring(3); 
+					console.log("humtem : " + humtem); 
+					var arr = humtem.split(":");
+					if( arr.length > 1 ) {
+						var temp = parseFloat(arr[0]); 
+						var humi = parseFloat(arr[1]); 
+						if( !isNaN(temp) && !isNaN(humi) ) {
+							io.emit('hum', temp); 
+							io.emit('tem', humi); 
+							// todo insert mysql .. 
+	
+							mySqlClient.query( 'insert into dev01(Temperature, Humidity) values(?,?)',
+							[temp, humi],function(error,result)
+							{
+								if(error)
+								{
+									console.log('insert error: ', error.message);
+								}
+							});
+						}
+					}
+				}  
+			}
 	});
 
 	socket.on('message', (msg) => { 

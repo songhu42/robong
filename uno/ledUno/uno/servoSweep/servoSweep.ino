@@ -1,5 +1,12 @@
 #include <Servo.h>
 
+#include "DHT.h"
+#define DHTPIN 2
+#define DHTTYPE DHT11
+#define DHT11_RETRY_DELAY 1000 // default value 1000 
+
+DHT dht(DHTPIN, DHTTYPE);
+
 Servo myservo;  // create Servo object to control a servo
 // twelve Servo objects can be created on most boards
 
@@ -24,6 +31,10 @@ void setup() {
   myservo.write(pos);  
   delay(15); 
 }
+
+float prevTemp = 0; 
+float prevHumi = 0; 
+unsigned long prevTime = 0; 
 
 void loop() {
 
@@ -74,7 +85,25 @@ void loop() {
     prevVal = analogVal; 
     Serial.println("adc" + String(analogVal)); 
     delay(50); 
+  } 
+
+
+  // 기본 delay 시간이 지난후에만 측정한다. 
+  unsigned long curTime = millis(); 
+  if( curTime - prevTime > DHT11_RETRY_DELAY ) {
+    prevTime = curTime; 
+
+    float humi = dht.readHumidity();
+    float temp = dht.readTemperature();
+
+    // 변경된 경우에만 db에 기록한다. 
+    if( prevHumi != humi || prevTemp != temp) {
+      prevHumi = humi; 
+      prevTemp = temp; 
+      Serial.println("hum" + String(humi) + ":" + String(temp)); 
+    } 
   }
+
 
   /*
   for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
