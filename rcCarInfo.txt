@@ -1,0 +1,55 @@
+AIoT AutoCar Prime
+ - Nvidia Jetson Nano 탑제
+ - 안백전자 Pop.AI Lib 
+ - 카메라, 마이크, 6축 센서, 스피커 탑제 
+ 
+ 
+ https://cloud.soda.io/signup?utm_source=docs
+ songhu42@gmail.com/Gnsrn.sil42
+ 
+ 
+ rc카 ssh 연결 
+ ssh soda@10.10.13.188 soda/soda 
+ 
+rc카  jupyterLap 연결 
+http://10.10.13.188:8888
+
+
+마이펫카 
+- rccar 음성 명령 종류 
+- 구동 
+전진, 앞으로, 가 , 이랴~
+후진, 뒤로, 가 
+속도올려, 올려, 속도높여, 높여
+속도내려, 내려, 속도낮춰, 낮춰
+멈춰, 정지, 스톱, 워~
+오른쪽, 우회전
+왼쪽, 좌회전
+- 부사 
+천천히, 조금씩, 조금
+빨리, 급히, 급 펫
+- 행동 
+  웃어, 울어, 깜빡여, 춤춰, 회전모드, 사각모드, 별모드 
+  따라와, 가자
+  
+  
+  
+  
+    
+for data in datalist:
+    print("file : " + datadir + "/" + data)
+    w = wave.open(datadir + "/" + data, "rb")
+    p = pa.PyAudio()
+    stream = p.open(format=p.get_format_from_width(w.getsampwidth()), channels=w.getnchannels(), 
+                   rate=w.getframerate(), output=True, stream_callback=callback)
+    stream.start_stream()
+    
+    while stream.is_active():
+        time.sleep(0.1)
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+    
+    cnt += 1
+    if( cnt > 2 ) :
+        break
