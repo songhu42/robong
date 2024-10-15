@@ -5,6 +5,26 @@
 using namespace cv; 
 using namespace std; 
 
+void onMouse(int event, int x, int y, int flags, void *data); 
+
+void onMouse(int event, int x, int y, int flags, void *data) {
+    Mat *img = (Mat *)data; 
+    Mat movImg; 
+    movImg = (*img).clone();
+
+    switch(event) {
+        case EVENT_LBUTTONDOWN:
+            cout << x << ", " << y << endl; 
+            circle(*img, Point(x, y), 10, Scalar(255, 0, 0), 2); 
+            imshow("img3", *img); 
+            break; 
+        case EVENT_MOUSEMOVE :
+            rectangle(movImg, Point(x-15, y-15), Point(x+15, y+15), Scalar(0, 0, 200), 3); 
+            imshow("img3", movImg); 
+            break; 
+    }
+} 
+
 int main(int argc, char* args[] ) {
 
     cout << "Hello OpenCV!" << endl; 
@@ -28,7 +48,12 @@ int main(int argc, char* args[] ) {
 
     putText(img3, "This is Circle", Point(80, 130), FONT_ITALIC, 4, Scalar(0, 255, 0), 3); 
 
+    namedWindow("img3"); 
+
     imshow("img3", img3); 
+
+    // mouse event 
+    setMouseCallback("img3", onMouse, (void*)&img3); 
 
     waitKey(0); 
 
