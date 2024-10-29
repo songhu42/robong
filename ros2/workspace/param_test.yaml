@@ -1,0 +1,6 @@
+/simple_param:
+  ros__parameters:
+    my_param: "file 지정  파라미터"
+    node_name: simple_param
+    num1: 456
+    num2: 1.123

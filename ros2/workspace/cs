@@ -1,0 +1,2 @@
+ros2 run simple_ros_cpp hello_sub
+

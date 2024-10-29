@@ -1,0 +1,15 @@
+/argument_pub:
+  ros__parameters:
+    max: 30
+    min: 0
+    use_sim_time: false
+
+/calculator:
+  ros__parameters:
+    use_sim_time: false
+
+/operator_client:
+  ros__parameters:
+    service_time: 1
+    oper: "*"
+    use_sim_time: false

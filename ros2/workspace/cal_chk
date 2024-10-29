@@ -1,0 +1,2 @@
+ros2 run calculator cal_checker $1 $2 
+

@@ -55,6 +55,29 @@ int main(int argc, char* args[] ) {
     // mouse event 
     setMouseCallback("img3", onMouse, (void*)&img3); 
 
+    // bit 연산 
+    Mat src1, src2, dest1; 
+    
+    bitwise_and(src1, src2, dest1); 
+    bitwise_or(src1, src2, dest1); 
+    bitwise_xor(src1, src2, dest1); 
+    bitwise_not(src1, dest1); 
+
+    // mask 처리 
+    float data[] = {-1, -1, 0, -1, 0, 1, 0, 1, 1}; 
+    Mat emboss(3, 3, CV_32F, data); 
+    Mat dest; 
+    filter2D(img3, dest, -1, emboss, Point(-1, -1), 128); 
+    imshow("emboss", dest); 
+
+    int ksize = 3; // filter size 홀수 
+    blur(img3, dest, Size(ksize, ksize), Point(-1, -1)); 
+    imshow("blur", dest); 
+    
+    // 가우시안 필터 => 잡음 제거, 에지 약해짐 
+    // 양방향 필터 : 잡음 제거, 에지 유지 
+
+    
     waitKey(0); 
 
     return 0; 
