@@ -73,6 +73,10 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "*.ipp": "cpp"
-    }
+        "*.ipp": "cpp",
+        "any": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp"
+    },
+    "cmake.ignoreCMakeListsMissing": true
 }

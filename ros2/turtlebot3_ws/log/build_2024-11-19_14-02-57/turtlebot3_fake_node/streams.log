@@ -1,0 +1,37 @@
+[0.042s] Invoking command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_teleop:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --build /home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node -- -j4 -l4
+[0.236s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_fake_node.dir/src/turtlebot3_fake_node.cpp.o[0m
+[41.389s] [100%] [32m[1mLinking CXX executable turtlebot3_fake_node[0m
+[43.994s] [100%] Built target turtlebot3_fake_node
+[44.081s] Invoked command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_teleop:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --build /home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node -- -j4 -l4
+[44.235s] Invoking command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_teleop:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --install /home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node
+[44.297s] -- Install configuration: ""
+[44.297s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node
+[44.357s] -- Set runtime path of "/home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node" to ""
+[44.357s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch
+[44.360s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py
+[44.361s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py
+[44.364s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param
+[44.365s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml
+[44.369s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml
+[44.369s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml
+[44.369s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/include/
+[44.371s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/include//turtlebot3_fake_node
+[44.371s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp
+[44.371s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node
+[44.374s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node
+[44.375s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.sh
+[44.375s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.dsv
+[44.375s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.sh
+[44.376s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.dsv
+[44.376s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.bash
+[44.376s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.sh
+[44.376s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.zsh
+[44.377s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.dsv
+[44.377s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv
+[44.378s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/packages/turtlebot3_fake_node
+[44.378s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[44.379s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[44.381s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig.cmake
+[44.382s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig-version.cmake
+[44.382s] -- Up-to-date: /home/song/apps/robong/ros2/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.xml
+[44.406s] Invoked command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_teleop:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --install /home/song/apps/robong/ros2/turtlebot3_ws/build/turtlebot3_fake_node

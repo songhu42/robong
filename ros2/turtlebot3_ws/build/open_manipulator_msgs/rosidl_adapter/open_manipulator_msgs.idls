@@ -1,0 +1,9 @@
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:msg/JointPosition.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:msg/KinematicsPose.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:msg/OpenManipulatorState.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/GetJointPosition.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/GetKinematicsPose.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetJointPosition.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetKinematicsPose.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetDrawingTrajectory.idl
+/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetActuatorState.idl

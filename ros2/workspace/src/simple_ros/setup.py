@@ -42,7 +42,11 @@ setup(
             "move_turtle_time_ns = simple_ros.move_turtle_time_ns:main",
             "action_server = simple_ros.action_server:main",
             "action_client = simple_ros.action_client:main", 
-            "logging_exam = simple_ros.logging_exam:main"
+            "logging_exam = simple_ros.logging_exam:main",
+            "deadline = simple_ros.deadline:main", 
+            "lifespan = simple_ros.lifespan:main", 
+            "liveliness = simple_ros.liveliness:main"
+
             ],
     },
 )

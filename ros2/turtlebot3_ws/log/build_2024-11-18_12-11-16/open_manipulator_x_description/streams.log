@@ -1,0 +1,58 @@
+[0.058s] Invoking command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake /home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator/open_manipulator_x_description -DCMAKE_INSTALL_PREFIX=/home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description
+[0.481s] -- The C compiler identification is GNU 11.4.0
+[0.856s] -- The CXX compiler identification is GNU 11.4.0
+[0.910s] -- Detecting C compiler ABI info
+[1.372s] -- Detecting C compiler ABI info - done
+[1.471s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.471s] -- Detecting C compile features
+[1.473s] -- Detecting C compile features - done
+[1.505s] -- Detecting CXX compiler ABI info
+[2.089s] -- Detecting CXX compiler ABI info - done
+[2.167s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.172s] -- Detecting CXX compile features
+[2.180s] -- Detecting CXX compile features - done
+[2.201s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.122s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[5.235s] -- Configuring done
+[5.251s] -- Generating done
+[5.259s] -- Build files have been written to: /home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description
+[5.283s] Invoked command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake /home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator/open_manipulator_x_description -DCMAKE_INSTALL_PREFIX=/home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description
+[5.296s] Invoking command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --build /home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description -- -j4 -l4
+[5.710s] Invoked command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --build /home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description -- -j4 -l4
+[5.839s] Invoking command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --install /home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description
+[5.874s] -- Install configuration: ""
+[5.876s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/launch
+[5.876s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/launch/open_manipulator_x_rviz.launch.py
+[5.878s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/launch/.DS_Store
+[5.882s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes
+[5.887s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes/chain_link2.stl
+[5.891s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes/chain_link1.stl
+[5.900s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes/chain_link3.stl
+[5.911s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes/chain_link_grip_l.stl
+[5.917s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes/chain_link5.stl
+[5.924s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes/chain_link_grip_r.stl
+[5.924s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/meshes/chain_link4.stl
+[5.930s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/rviz
+[5.930s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/rviz/open_manipulator_x.rviz
+[5.930s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/urdf
+[5.931s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/urdf/open_manipulator_x.transmission.xacro
+[5.931s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/urdf/open_manipulator_x.urdf.xacro
+[5.931s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/urdf/materials.xacro
+[5.931s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/urdf/open_manipulator_x_robot.urdf.xacro
+[5.932s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/urdf/open_manipulator_x.gazebo.xacro
+[5.937s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/ament_index/resource_index/package_run_dependencies/open_manipulator_x_description
+[5.938s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/ament_index/resource_index/parent_prefix_path/open_manipulator_x_description
+[5.938s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/environment/ament_prefix_path.sh
+[5.943s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/environment/ament_prefix_path.dsv
+[5.944s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/environment/path.sh
+[5.948s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/environment/path.dsv
+[5.948s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/local_setup.bash
+[5.949s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/local_setup.sh
+[5.949s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/local_setup.zsh
+[5.949s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/local_setup.dsv
+[5.949s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/package.dsv
+[5.950s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/ament_index/resource_index/packages/open_manipulator_x_description
+[5.967s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/cmake/open_manipulator_x_descriptionConfig.cmake
+[5.968s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/cmake/open_manipulator_x_descriptionConfig-version.cmake
+[5.968s] -- Installing: /home/song/apps/robong/ros2/turtlebot3_ws/install/open_manipulator_x_description/share/open_manipulator_x_description/package.xml
+[5.968s] Invoked command in '/home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/apps/robong/ros2/workspace/install/calculator:/home/song/apps/robong/ros2/workspace/install/simple_ros:/home/song/apps/robong/ros2/workspace/install/ros2env:/home/song/apps/robong/ros2/workspace/install/ros2_aruco:/home/song/apps/robong/ros2/workspace/install/move_turtle:/home/song/apps/robong/ros2/workspace/install/SimplePkg:/home/song/apps/robong/ros2/workspace/install/Homework1018:/opt/ros/humble /usr/bin/cmake --install /home/song/apps/robong/ros2/turtlebot3_ws/build/open_manipulator_x_description

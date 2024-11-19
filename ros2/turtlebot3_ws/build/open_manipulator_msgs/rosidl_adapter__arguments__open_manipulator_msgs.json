@@ -1,0 +1,14 @@
+{
+  "package_name": "open_manipulator_msgs",
+  "non_idl_tuples": [
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:msg/JointPosition.msg",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:msg/KinematicsPose.msg",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:msg/OpenManipulatorState.msg",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:srv/GetJointPosition.srv",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:srv/GetKinematicsPose.srv",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:srv/SetJointPosition.srv",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:srv/SetKinematicsPose.srv",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:srv/SetDrawingTrajectory.srv",
+    "/home/song/apps/robong/ros2/turtlebot3_ws/src/open_manipulator_msgs:srv/SetActuatorState.srv"
+  ]
+}

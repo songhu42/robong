@@ -1,0 +1,2 @@
+# ros2 run simple_ros liveliness 1000 --kill-publisher-after 2000 --policy auto 
+ros2 run simple_ros liveliness 1000 --kill-publisher-after 2000 --policy manual 

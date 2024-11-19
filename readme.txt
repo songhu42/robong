@@ -3,8 +3,4 @@
 since 2024-07-18 
 author : humanval 
 
-git add -A
-git commit
-git push
-
 

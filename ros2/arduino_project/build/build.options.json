@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "",
+  "fqbn": "arduino:avr:uno",
+  "hardwareFolders": "/home/song/.arduino15/packages",
+  "otherLibrariesFolders": "/home/song/Arduino/libraries",
+  "runtime.ide.version": "10607",
+  "sketchLocation": "/home/song/apps/robong/ros2/arduino_project/servo"
+}

@@ -20,6 +20,43 @@ find_package(rcl_interfaces REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
+# for use components 
+find_package(rclcpp_components REQUIRED)
+find_package(rcutils REQUIRED)
+
+find_package(rclcpp_lifecycle  REQUIRED)
+find_package(lifecycle_msgs REQUIRED)
+
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+
+find_package(nav_msgs REQUIRED)
+
+add_library(talker_component SHARED src/talker_component.cpp)
+target_compile_definitions(talker_component PRIVATE "COMPOSITION_BUILDING_DLL")
+ament_target_dependencies(talker_component rclcpp std_msgs rclcpp_components)
+rclcpp_components_register_nodes(talker_component "composition::Talker")
+
+add_library(listener_component SHARED src/listener_component.cpp)
+target_compile_definitions(listener_component PRIVATE "COMPOSITION_BUILDING_DLL")
+ament_target_dependencies(listener_component rclcpp std_msgs rclcpp_components)
+rclcpp_components_register_nodes(listener_component "composition::Listener")
+
+# ros2 component types 
+# ros2 run rclcpp_components component_container
+# ros2 component list 
+# ros2 component load /ComponentManager simple_ros_cpp composition::Talker 
+# ros2 component load /ComponentManager simple_ros_cpp composition::Listener 
+
+
+install(TARGETS talker_component listener_component
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin)
+# for use components 
+
+
+
 include_directories(include)
 
 add_executable(hello_pub src/hello_pub.cpp)
@@ -75,6 +112,88 @@ target_link_libraries(image_pipeline_all
   opencv_highgui)
 
 
+add_executable(manual_composition src/manual_composition.cpp)
+  target_link_libraries(manual_composition
+  talker_component
+  listener_component
+  )
+ament_target_dependencies(manual_composition rclcpp std_msgs) 
+
+add_executable(lifecycle_talker src/lifecycle_talker.cpp)
+ament_target_dependencies(lifecycle_talker
+  lifecycle_msgs
+  rclcpp_lifecycle
+  std_msgs
+)
+add_executable(lifecycle_listener src/lifecycle_listener.cpp)
+ament_target_dependencies(lifecycle_listener
+  lifecycle_msgs
+  rclcpp_lifecycle
+  std_msgs
+)
+
+add_executable(lifecycle_service_client src/lifecycle_service_client.cpp)
+ament_target_dependencies(lifecycle_service_client
+  lifecycle_msgs
+  rclcpp_lifecycle
+  std_msgs
+)
+add_executable(lifecycle_service_client_thread src/lifecycle_service_client_thread.cpp)
+ament_target_dependencies(lifecycle_service_client_thread
+  lifecycle_msgs
+  rclcpp_lifecycle
+  std_msgs
+)
+
+add_executable(static_tf src/static_tf.cpp)
+ament_target_dependencies(static_tf
+  rclcpp
+  tf2
+  tf2_ros
+  geometry_msgs
+)
+
+add_executable(dynamic_tf src/dynamic_tf.cpp)
+ament_target_dependencies(dynamic_tf
+  rclcpp
+  tf2
+  tf2_ros
+  geometry_msgs
+  turtlesim
+)
+
+
+add_executable(dynamic_tf2 src/dynamic_tf2.cpp)
+ament_target_dependencies(dynamic_tf2
+  rclcpp
+  tf2
+  tf2_ros
+  geometry_msgs
+  turtlesim
+)
+
+add_executable(follow_turtle_tf src/follow_turtle_tf.cpp)
+ament_target_dependencies(follow_turtle_tf
+  rclcpp
+  tf2
+  tf2_ros
+  geometry_msgs
+  turtlesim
+)
+
+add_executable(publish_map src/publish_map.cpp)
+ament_target_dependencies(publish_map
+  rclcpp
+  nav_msgs
+)
+
+add_executable(publish_map_with_lidar src/publish_map_with_lidar.cpp)
+ament_target_dependencies(publish_map_with_lidar
+  rclcpp
+  nav_msgs
+  sensor_msgs
+)
+
 install(TARGETS 
   hello_pub 
   hello_pub_class 
@@ -91,6 +210,17 @@ install(TARGETS
   two_node_pipe
   two_node_cyclic_pipe
   image_pipeline_all
+  manual_composition
+  lifecycle_talker
+  lifecycle_listener
+  lifecycle_service_client
+  lifecycle_service_client_thread
+  static_tf
+  dynamic_tf
+  dynamic_tf2
+  follow_turtle_tf
+  publish_map
+  publish_map_with_lidar
   DESTINATION lib/${PROJECT_NAME})
 # added by manual finish... 
 

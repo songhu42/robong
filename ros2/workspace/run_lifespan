@@ -1,0 +1,1 @@
+ros2 run simple_ros lifespan 1000 --publish-count 10 --subscribe-after 3000 
